@@ -1,0 +1,50 @@
+files permissions
+=================================================
+-rw-r--r--. 1 root     root       0 Jun 14 12:47 file1
+
+
+
+rwx==> user
+rwx==>group
+rwx==>others/client/customers
+
+r-read
+w-write
+x-exicute
+
+2 types of file permissions
+========================================
+1.Numeric method
+2. Symbolic method
+
+1.Numeric method
+====================================
+syntax: chmod ppp file/foldername
+
+'p' is sum of r,w,x
+r=4
+w=2
+x=1
+total==>7
+
+chmod 000 file1
+r=0
+w=0
+x=0
+1st p user value = 0
+group= 0
+others=4+2+1=7
+
+2.Symbolic method
+============================
+syntax: chmod whowhatwhich file/foldername
+
+who==>user,group,others,all==>u,g,x,a
+what=>add,remove,set exactly===> +,-,=
+which==>read,write,execute==>r,w,x
+
+example 
+-----
+chmod u+r file1
+chmod u+gx file1
+chmod u+rwx,g+r,o-x file1
